@@ -9,23 +9,13 @@ export default {
 <template>
   <nav :class="['navbar', initData.theme === 'dark' ? 'navbar-dark bg-dark' : 'navbar-light bg-light']">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">MyApp</a>
+      <a class="navbar-brand" href="#">Artúr Friedrich</a>
       <div class="navbar-nav">
         <ul class="navbar-nav d-flex flex-row align-items-center">
           <li class="nav-item me-3">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item me-3">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item me-3">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <!-- Theme switcher button -->
-          <li class="nav-item me-3">
-            <button class="btn btn-outline-primary" @click="$emit('toggleTheme')">
-              Switch to {{ initData.theme === "dark" ? "Light" : "Dark" }} Mode
-            </button>
+            <span @click="$emit('toggleTheme')" style="cursor: pointer;">
+              <i :class="[initData.theme === 'dark' ? 'fa-solid fa-lightbulb' : 'fa-solid fa-moon', 'fa-lg']"></i>
+            </span>
           </li>
         </ul>
       </div>
@@ -34,4 +24,11 @@ export default {
 </template>
 
 <style scoped>
+.navbar-dark .fa-lightbulb {
+  color: #ffffff;
+}
+
+.navbar-light .fa-moon {
+  color: #000000;
+}
 </style>
