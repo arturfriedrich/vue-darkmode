@@ -1,27 +1,31 @@
 <script>
-import {reactive} from "vue"
+import { reactive } from "vue";
+import HeaderComponent from "@/components/Header.vue";
 
 export default {
   name: "App",
-  components: {},
+  components: { HeaderComponent },
   data() {
-
     const initData = reactive({
-      "theme": "light",
-    })
+      theme: "light",
+    });
 
     return {
-      initData
-    }
-
-  }
-}
+      initData,
+    };
+  },
+  methods: {
+    toggleTheme() {
+      this.initData.theme = this.initData.theme === "dark" ? "light" : "dark";
+    },
+  },
+};
 </script>
 
 <template>
-  <RouterView :initData="initData" />
+  <HeaderComponent :initData="initData" @toggleTheme="toggleTheme"/>
+  <RouterView :initData="initData"/>
 </template>
 
 <style scoped>
-
 </style>

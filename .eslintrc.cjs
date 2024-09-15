@@ -9,6 +9,13 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-    "vue/multi-word-component-names": "off",
-  },
+    'vue/no-mutating-props': [
+      'error',
+      {
+        'shallowOnly': true
+      }
+    ],
+    'vue/multi-word-component-names': 'off',
+    'vue/no-side-effects-in-computed-properties': 'off',
+  }
 }
