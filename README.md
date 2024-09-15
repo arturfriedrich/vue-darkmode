@@ -1,10 +1,15 @@
+**Plan:**
+1. Update the `README.md` file to reflect the current project setup and details.
+2. Include information about the theme switcher feature and how to use it.
+
+```markdown
 # vue-darkmode
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a Vue 3 application using Vite, featuring a dark mode theme switcher.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[PhpStorm](https://www.jetbrains.com/phpstorm/) 2024.1.4
 
 ## Customize configuration
 
@@ -32,4 +37,15 @@ npm run build
 
 ```sh
 npm run lint
+```
+
+## Theme Switcher
+
+This project includes a theme switcher that allows toggling between light and dark modes. The theme switcher is implemented using a `<span>` element with an icon that changes based on the current theme.
+
+### Usage
+
+- Click the theme switcher icon in the navigation bar to toggle between light and dark modes.
+- The icon will change to a sun icon in dark mode and a moon icon in light mode.
+- In dark mode, the icon color will be white, and in light mode, it will be black.
 ```
